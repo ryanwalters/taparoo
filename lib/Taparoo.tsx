@@ -34,6 +34,8 @@ export const Taparoo: FC<TaparooProps> = ({
   const [startY, setStartY] = useState<number>(0);
 
   function handleTouchStart(event: TouchEvent) {
+    console.log('handleTouchStart', event);
+
     const { clientX, clientY } = event.touches[0];
 
     setStartX(clientX);
@@ -47,6 +49,8 @@ export const Taparoo: FC<TaparooProps> = ({
   }
 
   function handleTouchEnd(event: TouchEvent) {
+    console.log('handleTouchEnd', event);
+
     if (!touchMoved) {
       onTap?.(event);
     }
@@ -64,7 +68,7 @@ export const Taparoo: FC<TaparooProps> = ({
     const deltaY = startY - clientY;
     const swipes = [];
 
-    console.log(event);
+    console.log('detectSwipes', event);
 
     // Horizontal swipe
 

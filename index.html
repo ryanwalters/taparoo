@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tap, Tap, Taparoo</title>
+    <meta name="description" content="React component for touch event handling" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="module">
+      import { render } from 'react-dom';
+      import { Taparoo } from './dist/Taparoo.js';
+
+      render(
+        <Taparoo>
+          <div style={{ height: 500, backgroundColor: 'red' }} />
+        </Taparoo>,
+        document.querySelector('#app')
+      );
+    </script>
+  </body>
+</html>
