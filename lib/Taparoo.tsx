@@ -1,14 +1,14 @@
 import React, { FC, TouchEvent, useState } from 'react';
 
 interface TaparooProps {
-  className: string;
-  onSwipe: Function;
-  onSwipeUp: Function;
-  onSwipeDown: Function;
-  onSwipeLeft: Function;
-  onSwipeRight: Function;
-  onTap: Function;
-  swipeThreshold: number;
+  className?: string;
+  onSwipe?: Function;
+  onSwipeUp?: Function;
+  onSwipeDown?: Function;
+  onSwipeLeft?: Function;
+  onSwipeRight?: Function;
+  onTap?: Function;
+  swipeThreshold?: number;
 }
 
 export enum SwipeDirection {
@@ -19,6 +19,7 @@ export enum SwipeDirection {
 }
 
 export const Taparoo: FC<TaparooProps> = ({
+  swipeThreshold = 40,
   children,
   className,
   onTap,
@@ -27,7 +28,6 @@ export const Taparoo: FC<TaparooProps> = ({
   onSwipeLeft,
   onSwipeRight,
   onSwipeUp,
-  swipeThreshold,
 }) => {
   const [touchMoved, setTouchMoved] = useState<boolean>(false);
   const [startX, setStartX] = useState<number>(0);
@@ -48,7 +48,7 @@ export const Taparoo: FC<TaparooProps> = ({
 
   function handleTouchEnd(event: TouchEvent) {
     if (!touchMoved) {
-      onTap(event);
+      onTap?.(event);
     }
 
     detectSwipes(event);
@@ -69,11 +69,11 @@ export const Taparoo: FC<TaparooProps> = ({
     if (deltaX > swipeThreshold) {
       swipes.push(SwipeDirection.Left);
 
-      onSwipeLeft(event);
+      onSwipeLeft?.(event);
     } else if (deltaX < -swipeThreshold) {
       swipes.push(SwipeDirection.Right);
 
-      onSwipeRight(event);
+      onSwipeRight?.(event);
     }
 
     // Vertical swipe
@@ -81,17 +81,17 @@ export const Taparoo: FC<TaparooProps> = ({
     if (deltaY > swipeThreshold) {
       swipes.push(SwipeDirection.Up);
 
-      onSwipeUp(event);
+      onSwipeUp?.(event);
     } else if (deltaY < -swipeThreshold) {
       swipes.push(SwipeDirection.Down);
 
-      onSwipeDown(event);
+      onSwipeDown?.(event);
     }
 
     // General, horizontal or vertical, swipe
 
     if (swipes.length > 0) {
-      onSwipe(swipes, event);
+      onSwipe?.(swipes, event);
     }
   }
 
