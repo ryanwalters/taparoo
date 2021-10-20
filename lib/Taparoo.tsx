@@ -59,36 +59,33 @@ export const Taparoo: FC<TaparooProps> = ({
   }
 
   function detectSwipes(event: TouchEvent) {
-    const isSingleTouch = event.touches.length === 1;
     const { clientX, clientY } = event.changedTouches[0];
     const deltaX = startX - clientX;
     const deltaY = startY - clientY;
     const swipes = [];
 
-    if (isSingleTouch) {
-      // Horizontal swipe
+    // Horizontal swipe
 
-      if (deltaX > swipeThreshold) {
-        swipes.push(SwipeDirection.Left);
+    if (deltaX > swipeThreshold) {
+      swipes.push(SwipeDirection.Left);
 
-        onSwipeLeft?.(event);
-      } else if (deltaX < -swipeThreshold) {
-        swipes.push(SwipeDirection.Right);
+      onSwipeLeft?.(event);
+    } else if (deltaX < -swipeThreshold) {
+      swipes.push(SwipeDirection.Right);
 
-        onSwipeRight?.(event);
-      }
+      onSwipeRight?.(event);
+    }
 
-      // Vertical swipe
+    // Vertical swipe
 
-      if (deltaY > swipeThreshold) {
-        swipes.push(SwipeDirection.Up);
+    if (deltaY > swipeThreshold) {
+      swipes.push(SwipeDirection.Up);
 
-        onSwipeUp?.(event);
-      } else if (deltaY < -swipeThreshold) {
-        swipes.push(SwipeDirection.Down);
+      onSwipeUp?.(event);
+    } else if (deltaY < -swipeThreshold) {
+      swipes.push(SwipeDirection.Down);
 
-        onSwipeDown?.(event);
-      }
+      onSwipeDown?.(event);
     }
 
     // General, horizontal or vertical, swipe
