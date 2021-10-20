@@ -64,6 +64,8 @@ export const Taparoo: FC<TaparooProps> = ({
     const deltaY = startY - clientY;
     const swipes = [];
 
+    console.log(event);
+
     // Return early if this interaction is not a single-touch event
     // (e.g. multi-touch events like pinch and zoom)
 
