@@ -1,6 +1,9 @@
 # IDE
 .idea
 
+# Parcel
+.parcel-cache
+
 # Logs
 logs
 *.log
