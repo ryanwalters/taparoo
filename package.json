@@ -1,0 +1,34 @@
+{
+  "name": "taparoo",
+  "version": "0.0.0",
+  "description": "Simple touch handler for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "react",
+    "touch",
+    "handler",
+    "tap",
+    "swipe"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "author": "Ryan Walters <ryan@ryanwalters.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.30",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
+    "react": "^17.0.2",
+    "typescript": "^4.4.4",
+    "husky": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": ">= 17"
+  }
+}
