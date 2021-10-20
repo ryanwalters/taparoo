@@ -2,7 +2,8 @@
   "name": "taparoo",
   "version": "1.0.0",
   "description": "Simple touch handling React component",
-  "main": "index.js",
+  "main": "dist/Taparoo.js",
+  "types": "dist/Taparoo.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "prebuild": "rimraf dist",
