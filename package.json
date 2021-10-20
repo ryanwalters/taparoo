@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\"",
     "prebuild": "rimraf dist",
     "build": "tsc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "watch": "tsc --watch"
   },
   "keywords": [
     "react",
