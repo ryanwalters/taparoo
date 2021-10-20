@@ -12,10 +12,10 @@ interface TaparooProps {
 }
 
 export enum SwipeDirection {
-  Up,
-  Down,
-  Left,
-  Right,
+  Up = 'swipeUp',
+  Down = 'swipeDown',
+  Left = 'swipeLeft',
+  Right = 'swipeRight',
 }
 
 export const Taparoo: FC<TaparooProps> = ({
