@@ -1,6 +1,6 @@
 {
   "name": "taparoo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple touch handling React component",
   "main": "dist/Taparoo.js",
   "types": "dist/Taparoo.d.ts",
