@@ -64,6 +64,8 @@ export const Taparoo: FC<TaparooProps> = ({
     const deltaY = startY - clientY;
     const swipes = [];
 
+    console.log(event);
+
     // Horizontal swipe
 
     if (deltaX > swipeThreshold) {
