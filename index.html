@@ -17,7 +17,7 @@
       import { Taparoo } from './dist/Taparoo.js';
 
       render(
-        <Taparoo>
+        <Taparoo onTap={() => console.log('tap!')} onSwipe={() => console.log('swipe!')}>
           <div style={{ height: 500, backgroundColor: 'red' }} />
         </Taparoo>,
         document.querySelector('#app')
