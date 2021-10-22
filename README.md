@@ -14,7 +14,6 @@ $ npm install taparoo
 
 ```typescript
 interface TaparooProps {
-  className?: string;
   onSwipe?: TaparooTouchEventHandler;
   onSwipeUp?: TaparooTouchEventHandler;
   onSwipeDown?: TaparooTouchEventHandler;
@@ -23,8 +22,6 @@ interface TaparooProps {
   onTap?: TaparooTouchEventHandler;
   swipeThreshold?: number;
 }
-
-// Types
 
 type TaparooTouchEventHandler = (event: TouchEvent, swipes?: Array<SwipeDirection>) => void;
 ```

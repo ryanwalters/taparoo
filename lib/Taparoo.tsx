@@ -10,7 +10,6 @@ export enum SwipeDirection {
 }
 
 interface TaparooProps {
-  className?: string;
   onSwipe?: TaparooTouchEventHandler;
   onSwipeUp?: TaparooTouchEventHandler;
   onSwipeDown?: TaparooTouchEventHandler;
@@ -23,13 +22,13 @@ interface TaparooProps {
 export const Taparoo: FC<TaparooProps> = ({
   swipeThreshold = 40,
   children,
-  className,
   onTap,
   onSwipe,
   onSwipeDown,
   onSwipeLeft,
   onSwipeRight,
   onSwipeUp,
+  ...rest
 }) => {
   const [touchMoved, setTouchMoved] = useState<boolean>(false);
   const [startX, setStartX] = useState<number>(0);
@@ -123,12 +122,7 @@ export const Taparoo: FC<TaparooProps> = ({
   }
 
   return (
-    <div
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      className={className}
-    >
+    <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} {...rest}>
       {children}
     </div>
   );
