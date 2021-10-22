@@ -15,7 +15,7 @@
     "build": "tsc",
     "prepare": "husky install",
     "watch": "tsc --watch",
-    "dev": "npx parcel index.html"
+    "dev": "npx parcel index.html --dist-dir docs"
   },
   "keywords": [
     "react",
