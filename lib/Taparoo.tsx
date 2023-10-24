@@ -1,4 +1,4 @@
-import React, { FC, TouchEvent, useEffect, useState } from 'react';
+import React, { FC, HTMLAttributes, TouchEvent, useEffect, useState } from 'react';
 
 type TaparooTouchEventHandler = (event: TouchEvent, swipes?: Array<SwipeDirection>) => void;
 
@@ -9,7 +9,7 @@ export enum SwipeDirection {
   Right = 'swipeRight',
 }
 
-interface TaparooProps {
+interface TaparooProps extends HTMLAttributes<HTMLElement> {
   onSwipe?: TaparooTouchEventHandler;
   onSwipeUp?: TaparooTouchEventHandler;
   onSwipeDown?: TaparooTouchEventHandler;
