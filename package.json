@@ -27,21 +27,21 @@
   "author": "Ryan Walters <ryan@ryanwalters.dev>",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "19.3.0",
-    "@commitlint/config-conventional": "19.2.2",
+    "@commitlint/cli": "19.4.1",
+    "@commitlint/config-conventional": "19.4.1",
     "@semantic-release/commit-analyzer": "13.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "10.0.7",
+    "@semantic-release/github": "10.3.2",
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.1",
-    "@types/react": "18.3.3",
-    "husky": "9.0.11",
-    "lint-staged": "15.2.7",
-    "prettier": "3.3.2",
+    "@types/react": "18.3.5",
+    "husky": "9.1.5",
+    "lint-staged": "15.2.10",
+    "prettier": "3.3.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "rimraf": "6.0.1",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   },
   "peerDependencies": {
     "react": "18.3.1"
