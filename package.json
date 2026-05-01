@@ -45,7 +45,7 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "react": "19.2.4"
+    "react": "19.2.5"
   },
   "prettier": {
     "singleQuote": true,
